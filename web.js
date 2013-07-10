@@ -9,7 +9,7 @@ var content;
 function readFile() {
   fs.readFile('./index.html', function (err, data) {
     if (err) throw err;
-    content = data
+    content = data;
   })
 });
 
