@@ -6,8 +6,9 @@ var fs = require('fs');
 
 var buffer = new Buffer(255);
 
-fs.readFile('./index.html', function (err, buffer) {
+fs.readFileSync('./index.html', function (err, buffer) {
   if (err) throw err;
+  console.log(data);
 });
 
 app.get('/', function(request, response) {
