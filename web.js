@@ -6,13 +6,15 @@ var fs = require('fs');
 
 var content;
 
-fs.readFile('./index.html', function (err, data) {
-  if (err) throw err;
-  content = data;
+function readFile() {
+  fs.readFile('./index.html', function (err, data) {
+    if (err) throw err;
+    content = data
+  })
 });
 
 app.get('/', function(request, response) {
-  response.send(content);
+  response.send('Hello 7');
 });
 
 var port = process.env.PORT || 5000;
