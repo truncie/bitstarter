@@ -4,15 +4,15 @@ var app = express.createServer(express.logger());
 
 var fs = require('fs');
 
-var content;
+var buffer = new Buffer(255);
 
 fs.readFile('./index.html', function (err, data) {
   if (err) throw err;
-  console.log(data);
+  buffer.write(data, "utf-8");
 });
 
 app.get('/', function(request, response) {
-  response.send('Hello 7');
+  response.send('Hello 8');
 });
 
 var port = process.env.PORT || 5000;
