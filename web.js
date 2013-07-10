@@ -1,4 +1,4 @@
-var express = require('express');
+ar express = require('express');
 
 var app = express.createServer(express.logger());
 
@@ -12,7 +12,7 @@ fs.readFile('./index.html', function (err, data) {
 });
 
 app.get('/', function(request, response) {
-  response.send('Hello Everyone!');
+  response.send(content);
 });
 
 var port = process.env.PORT || 5000;
